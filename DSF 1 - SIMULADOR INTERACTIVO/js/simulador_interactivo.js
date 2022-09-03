@@ -72,59 +72,6 @@ let frecuencia = function frecuenciaDeEnvio() {
 
 //////////////////////////////////////////// PRECIO DE LA MEMBRESIA
 
-// let membresia
-
-// let precio = function precioMembresia() {
-//     let membresia
-//     if ((peso == "250g") && (frecuencia == "semanal")) {
-//         membresia = 7.20
-//     }
-// } else if ((peso === "250g") && (frecuencia === "quincenal")) {
-//     membresia = 9.60
-// } else if ((peso === "250g") && (frecuencia === "mensual")) {
-//     membresia = 12
-// } else if ((peso === "500g") && (frecuencia === "semanal")) {
-//     membresia = 13
-// } else if ((peso === "500g") && (frecuencia === "quincenal")) {
-//     membresia = 17.5
-// } else if ((peso === "500g") && (frecuencia === "mensual")) {
-//     membresia = 22
-// } else if ((peso === "1kg") && (frecuencia === "semanal")) {
-//     membresia = 24
-// } else if ((peso === "1kg") && (frecuencia === "quincenal")) {
-//     membresia = 32
-// } else if ((peso === "1kg") && (frecuencia === "mensual")) {
-//     membresia = 42
-// } else {
-//     alert(`La membresia solicitada no esta disponible por el momento, por favor seleccione una de las membresias disponibles`)
-// }
-// return membresia
-// }
-//////////////////////////////
-// let membresia
-
-// if ((peso == "250g") && (frecuencia == "semanal")) {
-//     membresia = 7.20
-// } else if (peso == "250g" && frecuencia == "quincenal") {
-//     membresia = 9.60
-// } else if ((peso == "250g") && (frecuencia == "mensual")) {
-//     membresia = 12
-// } else if ((peso == "500g") && (frecuencia == "semanal")) {
-//     membresia = 13
-// } else if ((peso == "500g") && (frecuencia == "quincenal")) {
-//     membresia = 17.5
-// } else if ((peso == "500g") && (frecuencia == "mensual")) {
-//     membresia = 22
-// } else if ((peso == "1kg") && (frecuencia == "semanal")) {
-//     membresia = 24
-// } else if ((peso == "1kg") && (frecuencia == "quincenal")) {
-//     membresia = 32
-// } else if ((peso == "1kg") && (frecuencia == "mensual")) {
-//     membresia = 42
-// } else {
-//     alert(`La membresia solicitada no esta disponible por el momento, por favor seleccione una de las membresias disponibles`)
-// }
-
 let precio = (peso, frecuencia) => {
     let membresia
     if ((peso == "250g") && (frecuencia == "semanal")) {
@@ -154,15 +101,7 @@ let precio = (peso, frecuencia) => {
 let pesoCafe = peso()
 let frecuenciaPedido = frecuencia()
 let precioMembresia = precio(pesoCafe, frecuenciaPedido)
-// let membresia
 
-// let membresia = 0
-// if ((peso == "250g") && (frecuencia == "semanal")) {
-//     membresia = 7.20
-// }
-//  else {
-//     membresia = 10
-// }
 
 alert(`Su preferencia es ${gustoCafe()}, 
 te gusta el tipo de cafe ${tipoCafe()} , 
