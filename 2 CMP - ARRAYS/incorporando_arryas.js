@@ -1,7 +1,13 @@
 alert("BIENVENID@ A NUESTRA TIENDITA DE CAFE\n\nPor favor seleccione las opciones en base a la numeracion")
-
 //////////////////////////////////////////// SE LE PREGUNTA AL USUARIO SI DESEA SUSCRIBIRSE PARA INICIAR EL CICLO
 let carrito = prompt("Desea suscribirte? \n 1 - SI\n 2 - NO\n");
+if (carrito == 1) {
+    nombreUsuario = prompt("Cual es su nombre completo?")
+    direccionUsuario = prompt("Ingrese su direccion para el envio")
+} else {
+    alert("Muchas gracias por su visita, esperamos verle pronto")
+
+}
 
 //////////////////////////////////////////// SE INICIA EL CICLO PARA LA SUSCRIPCION
 while (carrito != "2") {
@@ -111,7 +117,70 @@ while (carrito != "2") {
 
     //////////////////////////////////////////// ALMACENANDO MIS FUNCIONES PARA LLAMARLAS
     alert(`Su preferencia es ${preferenciaCafe}, te gusta el tipo de cafe ${cafeina}, prefieres el grano de cafe ${tipoDeGrano}, recibiras ${pesoCafe} de cafe y lo recibiras de manera ${frecuenciaPedido}\n\nLa membresia es $${precioMembresia}.\nSu orden esta siendo procesada, muchas gracias!`);
+    // console.log(`Su preferencia es ${preferenciaCafe}, te gusta el tipo de cafe ${cafeina}, prefieres el grano de cafe ${tipoDeGrano}, recibiras ${pesoCafe} de cafe y lo recibiras de manera ${frecuenciaPedido}\n\nLa membresia es $${precioMembresia}.\nSu orden esta siendo procesada, muchas gracias!`);
 
     //////////////////////////////////////////// SE FINALIZA EL CICLO DE COMPRA CUANDO EL USUARIO DICE NO
     carrito = prompt("Desea agregar algo mas tu suscripcion? \n 1 - SI\n 2 - NO\n");
+    if (carrito == 2) {
+        alert("Muchas gracias por su visita, esperamos verle pronto")
+    }
+
+
+    //INCORPORANDO ARRAYS /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    //////////////////////////////////////////// FUNCION PARA UN NUMERO RANDOM DE PEDIDO
+    function getRandom() {
+        return Math.floor(Math.random() * 10);
+    }
+    let numeroPedido = getRandom()
+
+    //////////////////////////////////////////// SE ALMACENAN LA INFORMACION DEL USUARIO Y EL PEDIDO 
+    class Pedido {
+        constructor(id, usuario, direccion, preferencia, cafeina, grano, peso, frecuencia, precio) {
+            //ATRIBUTOS DE NUESTRA MEMBRESIA
+            this.id = id,
+                this.usuario = usuario,
+                this.direccion = direccion,
+                this.preferencia = preferencia,
+                this.cafeina = cafeina,
+                this.grano = grano,
+                this.peso = peso,
+                this.frecuencia = frecuencia,
+                this.precio = precio,
+                this.conEnvio = precio + 3
+        }
+
+        mostrarMembresia() {
+            console.log(`La nueva membresia fue agregada.
+        Su numero de pedido es: ${this.id}.
+        Nombre del usuario: ${this.usuario}.
+        Su direccion: ${this.direccion}.
+
+
+        Su frecuencia es de: ${this.frecuencia}.
+        El nivel de cafeina es: ${this.cafeina}.
+        Le gusta el grano ${this.grano}.
+        El peso es: ${this.peso}.
+        La frecuencia sera: ${this.frecuencia}.
+
+        SUBTOTAL
+        ******** Su precio es: $${this.precio}
+        TOTAL
+        ******** Precio del envio $3.
+        ******** Precio con envio: $${this.conEnvio}`)
+        }
+    }
+
+
+    const usuario1 = new Pedido(`Pedido #${numeroPedido}`, nombreUsuario, direccionUsuario, preferenciaCafe, cafeina, tipoDeGrano, pesoCafe, frecuenciaPedido, precioMembresia)
+
+    const solicitudPedido = [];
+    solicitudPedido.push(usuario1)
+
+
+    for (let tipoMembresia of solicitudPedido) {
+        tipoMembresia.mostrarMembresia()
+    }
+
 }
