@@ -178,6 +178,7 @@ while (carrito != "2") {
     const solicitudPedido = [];
     solicitudPedido.push(usuario1)
 
+    //////////////////////////////////////////// EN CONSOLA SE MUESTRA TODOS LOS PEDIDOS DEL QUE HAGA EL USUARIO
 
     for (let tipoMembresia of solicitudPedido) {
         tipoMembresia.mostrarMembresia()
