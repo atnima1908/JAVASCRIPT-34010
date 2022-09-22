@@ -1,37 +1,78 @@
-/* body{
-    background-color: #be993088;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-}
-
-div {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    border-radius: 5%;
-    text-align: center;
-} */
-
-#preferencia {
-    background-color: rgb(244, 238, 238);
-    text-align: center;
-    border-radius: 1rem;
-    margin: 0.5rem;
-    display: flex;
-}
-
-/*container Productos:*/
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .productosEstilos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
-.card {
-    margin: 1rem auto;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #bedfe8;
+}
+
+.accordion {
+    width: 950px;
 
 }
+
+.accordion .contentBx {
+    position: relative;
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+.label {
+    position: relative;
+    padding: 10px;
+    background-color: #2694af;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.label::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.contentBx.active .label::before {
+    content: '-';
+}
+
+.content {
+    position: relative;
+    /* padding: 10px; */
+    background-color: #FFF;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5 s;
+    overflow-y: auto;
+}
+
+.contentBx.active .content {
+    height: 350px;
+    padding: 10px;
+}
+
+.card-body:hover {
+    background-color: #6eb9cc;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

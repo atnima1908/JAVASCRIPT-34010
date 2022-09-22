@@ -227,43 +227,78 @@ const suscripcionPreferenciaCafe = []
 suscripcionPreferenciaCafe.push(preferencia1, preferencia2, preferencia3)
 console.log(suscripcionPreferenciaCafe)
 
-
-
-// let divPreferencia = document.getElementById("preferencia-suscripcion")
-// suscripcionPreferenciaCafe.forEach((preferencia) => {
-//     let nuevoProducto = document.createElement("div")
-//     nuevoProducto.innerHTML = `<div id="${preferencia.id}" class="card" style="width: 18rem;">
-//                                         <div class="card-body">
-//                                         <h4 class="card-title">${preferencia.titulo}</h4>
-//                                         <p class="">Info: ${preferencia.info}</p>
-//                                     </div>
-//                             </div>`
-//     divPreferencia.append(nuevoProducto)
-// })
-
-
-let divPreferencia = document.getElementById("preferencia-suscripcion")
+let divPreferencia = document.getElementById("productos")
 suscripcionPreferenciaCafe.forEach((preferencia) => {
     let suscripcion = document.createElement("div")
     suscripcion.innerHTML = `<div id="${preferencia.id}" class="card" style="width: 18rem;">
                                         <div class="card-body">
                                         <h4 class="card-title">${preferencia.titulo}</h4>
-                                        <p class="">Info: ${preferencia.info}</p>
+                                        <p class="">${preferencia.info}</p>
                                     </div>
                             </div>`
-
-
-    // suscripcion.innerHTML = ` <div id="${preferencia.id}" class="container px-4">
-    //                                 <div class="row row-cols-3">
-    //                                     <div  class="card col-4 p-3">
-    //                                         <h4 class="card-title">${preferencia.titulo}</h4>
-    //                                         <p class="">Info: ${preferencia.info}</p>
-    //                                     </div>
-    //                                 </div>
-    //                             </div>`
     divPreferencia.append(suscripcion)
 })
 
 
 
 
+
+//////////////////HASTA ACA FUNCIONA
+
+class CustomSelect {
+    constructor(originalSelect) {
+        this.originalSelect = originalSelect;
+        this.customSelect = document.createElement("div");
+        this.customSelect.classList.add("select");
+
+        this.originalSelect.querySelectorAll("option").forEach((optionElement) => {
+            const itemElement = document.createElement("div");
+
+            itemElement.classList.add("select__item");
+            itemElement.textContent = optionElement.textContent;
+            this.customSelect.appendChild(itemElement);
+
+            if (optionElement.selected) {
+                this._select(itemElement);
+            }
+
+            itemElement.addEventListener("click", () => {
+                if (
+                    this.originalSelect.multiple &&
+                    itemElement.classList.contains("select__item--selected")
+                ) {
+                    this._deselect(itemElement);
+                } else {
+                    this._select(itemElement);
+                }
+            });
+        });
+
+        this.originalSelect.insertAdjacentElement("afterend", this.customSelect);
+        this.originalSelect.style.display = "none";
+    }
+
+    _select(itemElement) {
+        const index = Array.from(this.customSelect.children).indexOf(itemElement);
+
+        if (!this.originalSelect.multiple) {
+            this.customSelect.querySelectorAll(".select__item").forEach((el) => {
+                el.classList.remove("select__item--selected");
+            });
+        }
+
+        this.originalSelect.querySelectorAll("option")[index].selected = true;
+        itemElement.classList.add("select__item--selected");
+    }
+
+    _deselect(itemElement) {
+        const index = Array.from(this.customSelect.children).indexOf(itemElement);
+
+        this.originalSelect.querySelectorAll("option")[index].selected = false;
+        itemElement.classList.remove("select__item--selected");
+    }
+}
+
+document.querySelectorAll(".custom-select").forEach((selectElement) => {
+    new CustomSelect(selectElement);
+});
