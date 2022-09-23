@@ -200,29 +200,46 @@ class Pedido {
 
 //Clase constuctora 
 class CafePreferencia {
-    constructor(id, titulo, info) {
+    constructor(id, clase, titulo, info) {
         //propiedades o atributos de nuestra clase
         this.id = id,
+            this.clase = clase,
             this.titulo = titulo,
             this.info = info
     }
 
     mostrarData() {
         console.log(`La preferencia del cafe es ${this.id}.
-        INFORMACION:
+        INFORMACION: ${this.class}
         ${this.info}`)
     }
 }
 //Instanciación de objetos -- respetamos orden y cantidad de atributos
 
-const preferencia1 = new CafePreferencia("preferencia", "Capsula", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+const preferencia1 = new CafePreferencia("opcion1", "preferenciaCafe", "Capsula", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
 
-const preferencia2 = new CafePreferencia("preferencia", "Filter", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+const preferencia2 = new CafePreferencia("opcion2", "preferenciaCafe", "Filtro", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
 
-const preferencia3 = new CafePreferencia("preferencia", "Espresso", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+const preferencia3 = new CafePreferencia("opcion3", "preferenciaCafe", "Espresso", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
 
 
 //inicializar el array:
+// const suscripcionPreferenciaCafe = []
+// suscripcionPreferenciaCafe.push(preferencia1, preferencia2, preferencia3)
+// console.log(suscripcionPreferenciaCafe)
+
+// let divPreferencia = document.getElementById("productos")
+// suscripcionPreferenciaCafe.forEach((preferencia) => {
+//     let suscripcion = document.createElement("div")
+//     suscripcion.innerHTML = `<div id="${preferencia.id}" class="card ${preferencia.clase}" style="width: 18rem; ">
+//                                     <div class="card-body">
+//                                         <h4 class="card-title">${preferencia.titulo}</h4>
+//                                         <p class="">${preferencia.info}</p>
+//                                     </div>
+//                             </div> `
+//     divPreferencia.append(suscripcion)
+// })
+
 const suscripcionPreferenciaCafe = []
 suscripcionPreferenciaCafe.push(preferencia1, preferencia2, preferencia3)
 console.log(suscripcionPreferenciaCafe)
@@ -230,15 +247,18 @@ console.log(suscripcionPreferenciaCafe)
 let divPreferencia = document.getElementById("productos")
 suscripcionPreferenciaCafe.forEach((preferencia) => {
     let suscripcion = document.createElement("div")
-    suscripcion.innerHTML = `<div id="${preferencia.id}" class="card" style="width: 18rem;">
-                                        <div class="card-body">
+    suscripcion.innerHTML = ` <div class="toggle-container">
+                            <input type="checkbox" id="${preferencia.id}" class="seleccionCafe">
+                            <div class="card ${preferencia.clase}" style="width: 18rem; ">
+                                    <div class="card-body">
                                         <h4 class="card-title">${preferencia.titulo}</h4>
                                         <p class="">${preferencia.info}</p>
                                     </div>
-                            </div>`
+                            </div>
+                            
+                        </div>`
     divPreferencia.append(suscripcion)
 })
-
 
 
 
@@ -251,10 +271,166 @@ suscripcionPreferenciaCafe.forEach((preferencia) => {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-const accordion = document.getElementsByClassName('contentBx');
 
-for (i = 0; i < accordion.length; i++) {
-    accordion[i].addEventListener('click', function () {
-        this.classList.toggle('active')
-    })
+// const seleccionCafe = document.querySelectorAll('.preferenciaCafe')
+// const opcion1Cafe = document.querySelector('#opcion1')
+// const opcion2Cafe = document.querySelector('#opcion2')
+// const opcion3Cafe = document.querySelector('#opcion3')
+
+
+// seleccionCafe.forEach(seleccion => seleccion.addEventListener('change', (e) => doTheTrick(e.target)))
+
+// function doTheTrick(theClickedOne) {
+//     if (opcion1Cafe.checked || opcion2Cafe.checked || opcion3Cafe.checked) {
+//         if (opcion1Cafe === theClickedOne) {
+//             opcion2Cafe.checked = false
+//             opcion3Cafe.checked = false
+
+//         }
+
+//         if (opcion2Cafe === theClickedOne) {
+//             opcion1Cafe.checked = false
+//             opcion3Cafe.checked = false
+
+//         }
+
+//         if (opcion3Cafe === theClickedOne) {
+//             opcion2Cafe.checked = false
+//             opcion1Cafe.checked = false
+
+//         }
+//     }
+// }
+
+
+// const seleccionCafe = document.querySelectorAll('.seleccionCafe')
+// const opcion1Cafe = document.querySelector('#opcion1')
+// const opcion2Cafe = document.querySelector('#opcion2')
+// const opcion3Cafe = document.querySelector('#opcion3')
+
+// seleccionCafe.forEach(seleccion => seleccion.addEventListener('change', (e) => doTheTrick(e.target)))
+
+// function doTheTrick(theClickedOne) {
+//     if (good.checked || cheap.checked || fast.checked) {
+//         if (good === theClickedOne) {
+//             // good.checked = true
+//             fast.checked = false
+//             cheap.checked = false
+
+//         }
+
+//         if (cheap === theClickedOne) {
+//             // cheap.checked = true
+//             good.checked = false
+//             fast.checked = false
+
+//         }
+
+//         if (fast === theClickedOne) {
+//             // fast.checked = true
+//             cheap.checked = false
+//             good.checked = false
+
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//ACORDION
+
+// const accordion = document.getElementsByClassName('contentBx');
+
+// for (i = 0; i < accordion.length; i++) {
+//     accordion[i].addEventListener('click', function () {
+//         this.classList.toggle('active')
+//     })
+// }
+
+var accItem = document.getElementsByClassName('accordionItem');
+var accHD = document.getElementsByClassName('accordionItemHeading');
+for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
 }
+function toggleItem() {
+    var itemClass = this.parentNode.className;
+    for (i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+const toggles = document.querySelectorAll('.toggle')
+const good = document.querySelector('#good')
+const cheap = document.querySelector('#cheap')
+const fast = document.querySelector('#fast')
+
+toggles.forEach(toggle => toggle.addEventListener('change', (e) => doTheTrick(e.target)))
+
+function doTheTrick(theClickedOne) {
+    if (good.checked || cheap.checked || fast.checked) {
+        if (good === theClickedOne) {
+            // good.checked = true
+            fast.checked = false
+            cheap.checked = false
+
+        }
+
+        if (cheap === theClickedOne) {
+            // cheap.checked = true
+            good.checked = false
+            fast.checked = false
+
+        }
+
+        if (fast === theClickedOne) {
+            // fast.checked = true
+            cheap.checked = false
+            good.checked = false
+
+        }
+    }
+}
+
+
+
+
+
+/* custom checkbox js */
+// Not really needed, but here for learning!
+// wouldn't work atm for multiple fieldsets in one window
+
+const radios = document.querySelectorAll('.radio-item'); // returns node list
+const inputs = document.querySelectorAll('.radio-item__input');
+
+function selectRadios() {
+    for (var i = 0, max = radios.length; i < max; i++) {
+
+        radios[i].onclick = function () {
+            const input = this.firstElementChild; // get input just clicked
+
+            if (input.checked) { return; }
+
+            // if not checked, check
+
+            // remove checked from other inputs
+            inputs.forEach(el => el.setAttribute("checked", false));
+
+            // check clicked input
+            input.setAttribute("checked", "true");
+        };
+    };
+};
+selectRadios();
