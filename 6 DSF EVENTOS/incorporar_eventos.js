@@ -253,30 +253,6 @@ const frecuencia3 = new CafePreferencia("opcion3", "frecuenciaEnvio", "Mensual",
 //     divPreferencia.append(suscripcion)
 // })
 
-////////////// DOM - PREFERENCIA 
-
-
-const suscripcionPreferencia = []
-suscripcionPreferencia.push(preferencia1, preferencia2, preferencia3)
-console.log(suscripcionPreferencia)
-////////////// DOM - TIPO DE CAFE 
-const suscripcionTipo = []
-suscripcionTipo.push(cafeina1, cafeina2, cafeina3)
-console.log(suscripcionTipo)
-////////////// DOM - GRANO DE CAFE 
-const suscripcionGrano = []
-suscripcionGrano.push(grano1, grano2, grano3)
-// console.log(suscripcionGrano)
-////////////// DOM - CANTIDAD DE CAFE
-const suscripcionCantidad = []
-suscripcionCantidad.push(cantidad1, cantidad2, cantidad3)
-// console.log(suscripcionCantidad)
-////////////// DOM - FRECUENCIA ENVIO
-const suscripcionFrecuencia = []
-suscripcionFrecuencia.push(frecuencia1, frecuencia2, frecuencia3)
-// console.log(suscripcionFreciencia)
-
-
 // ATRAPANDO LOS NOMBRES DE NUESTROS DIV EN HTML
 let divPreferencia = document.getElementById("preferenciaCafe")
 let divTipo = document.getElementById("tipoCafe")
@@ -284,6 +260,12 @@ let divGrano = document.getElementById("granoCafe")
 let divCantidad = document.getElementById("cantidadCafe")
 let divFrecuencia = document.getElementById("frecuenciaCafe")
 
+
+
+////////////// DOM - PREFERENCIA 
+const suscripcionPreferencia = []
+suscripcionPreferencia.push(preferencia1, preferencia2, preferencia3)
+console.log(suscripcionPreferencia)
 
 suscripcionPreferencia.forEach((preferencia) => {
     let suscripcion = document.createElement("div")
@@ -300,20 +282,31 @@ suscripcionPreferencia.forEach((preferencia) => {
 })
 
 
+
+////////////// DOM - TIPO DE CAFE 
+const suscripcionTipo = []
+suscripcionTipo.push(cafeina1, cafeina2, cafeina3)
+console.log(suscripcionTipo)
+
 suscripcionTipo.forEach((cafeina) => {
     let suscripcion = document.createElement("div")
     suscripcion.innerHTML = `                            <label class="radio-item">
-                                <input class="radio-item__input">
-                                <span class="radio-item__label-text">
-
-                                    <h4 class="card-title">${cafeina.titulo}</h4>
-                                    <p class="">${cafeina.info}</p>
-
-                                </span>
-                            </label>`
+    <input class="radio-item__input">
+    <span class="radio-item__label-text">
+    
+    <h4 class="card-title">${cafeina.titulo}</h4>
+    <p class="">${cafeina.info}</p>
+    
+    </span>
+    </label>`
     divTipo.append(suscripcion)
 })
 
+
+////////////// DOM - GRANO DE CAFE 
+const suscripcionGrano = []
+suscripcionGrano.push(grano1, grano2, grano3)
+// console.log(suscripcionGrano)
 
 suscripcionGrano.forEach((grano) => {
     let suscripcion = document.createElement("div")
@@ -328,6 +321,12 @@ suscripcionGrano.forEach((grano) => {
                             </label>`
     divGrano.append(suscripcion)
 })
+
+
+////////////// DOM - CANTIDAD DE CAFE
+const suscripcionCantidad = []
+suscripcionCantidad.push(cantidad1, cantidad2, cantidad3)
+// console.log(suscripcionCantidad)
 
 suscripcionCantidad.forEach((cantidad) => {
     let suscripcion = document.createElement("div")
@@ -344,9 +343,19 @@ suscripcionCantidad.forEach((cantidad) => {
 })
 
 
+
+
+
+
+
+////////////// DOM - FRECUENCIA ENVIO
+const suscripcionFrecuencia = []
+suscripcionFrecuencia.push(frecuencia1, frecuencia2, frecuencia3)
+// console.log(suscripcionFreciencia)
+
 suscripcionFrecuencia.forEach((frecuencia) => {
     let suscripcion = document.createElement("div")
-    suscripcion.innerHTML = `                            <label class="radio-item">
+    suscripcion.innerHTML = `                         <label class="radio-item">
                                 <input class="radio-item__input">
                                 <span class="radio-item__label-text">
 

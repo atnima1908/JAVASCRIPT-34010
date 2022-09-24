@@ -24,8 +24,8 @@ fieldset {
     position: relative;
     display: inline-block;
     padding: 0.5em 1em;
-    border: 2px solid #ebebeb !important;
-    border-radius: 3em;
+    border: 6px solid #ebebeb !important;
+    border-radius: 10px;
     background: #fff;
     color: #444;
     font-weight: 400;
@@ -33,7 +33,7 @@ fieldset {
 }
 
 .radios-wrapper .radio-item .radio-item__label-text:hover {
-    border: 2px solid #D1368C !important;
+    border: 6px solid #D1368C !important;
     background: #fdeaf5;
     color: #552773;
 }
@@ -56,7 +56,7 @@ fieldset {
 
 .radios-wrapper .radio-item .radio-item__input:focus~.radio-item__label-text,
 .radios-wrapper .radio-item .radio-item__input:checked+.radio-item__label-text {
-    border: 2px solid #D1368C !important;
+    border: 6px solid #D1368C !important;
     background: #fdeaf5;
     color: #552773;
 }
