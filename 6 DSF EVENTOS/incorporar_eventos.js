@@ -370,113 +370,10 @@ suscripcionFrecuencia.forEach((frecuencia) => {
 
 
 
-
-// let card = () => {
-//     let suscripcion = document.createElement("div")
-//     suscripcion.innerHTML = `<div id="${preferencia.id}" class="card ${preferencia.clase}" style="width: 18rem; ">
-//                                          <div class="card-body">
-//                                              <h4 class="card-title">${preferencia.titulo}</h4>
-//                                              <p class="">${preferencia.info}</p>
-//                                         </div>
-//                                  </div> `
-//     divPreferencia.append(suscripcion)
-// }
-
-
-
-
-
-
-
-//////////////////HASTA ACA FUNCIONA
-
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-// const seleccionCafe = document.querySelectorAll('.preferenciaCafe')
-// const opcion1Cafe = document.querySelector('#opcion1')
-// const opcion2Cafe = document.querySelector('#opcion2')
-// const opcion3Cafe = document.querySelector('#opcion3')
-
-
-// seleccionCafe.forEach(seleccion => seleccion.addEventListener('change', (e) => doTheTrick(e.target)))
-
-// function doTheTrick(theClickedOne) {
-//     if (opcion1Cafe.checked || opcion2Cafe.checked || opcion3Cafe.checked) {
-//         if (opcion1Cafe === theClickedOne) {
-//             opcion2Cafe.checked = false
-//             opcion3Cafe.checked = false
-
-//         }
-
-//         if (opcion2Cafe === theClickedOne) {
-//             opcion1Cafe.checked = false
-//             opcion3Cafe.checked = false
-
-//         }
-
-//         if (opcion3Cafe === theClickedOne) {
-//             opcion2Cafe.checked = false
-//             opcion1Cafe.checked = false
-
-//         }
-//     }
-// }
-
-
-// const seleccionCafe = document.querySelectorAll('.seleccionCafe')
-// const opcion1Cafe = document.querySelector('#opcion1')
-// const opcion2Cafe = document.querySelector('#opcion2')
-// const opcion3Cafe = document.querySelector('#opcion3')
-
-// seleccionCafe.forEach(seleccion => seleccion.addEventListener('change', (e) => doTheTrick(e.target)))
-
-// function doTheTrick(theClickedOne) {
-//     if (good.checked || cheap.checked || fast.checked) {
-//         if (good === theClickedOne) {
-//             // good.checked = true
-//             fast.checked = false
-//             cheap.checked = false
-
-//         }
-
-//         if (cheap === theClickedOne) {
-//             // cheap.checked = true
-//             good.checked = false
-//             fast.checked = false
-
-//         }
-
-//         if (fast === theClickedOne) {
-//             // fast.checked = true
-//             cheap.checked = false
-//             good.checked = false
-
-//         }
-//     }
-// }
-
-
-
-
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //ACORDION
 
-// const accordion = document.getElementsByClassName('contentBx');
-
-// for (i = 0; i < accordion.length; i++) {
-//     accordion[i].addEventListener('click', function () {
-//         this.classList.toggle('active')
-//     })
-// }
 
 var accItem = document.getElementsByClassName('accordionItem');
 var accHD = document.getElementsByClassName('accordionItemHeading');
@@ -497,45 +394,6 @@ function toggleItem() {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-const toggles = document.querySelectorAll('.toggle')
-const good = document.querySelector('#good')
-const cheap = document.querySelector('#cheap')
-const fast = document.querySelector('#fast')
-
-toggles.forEach(toggle => toggle.addEventListener('change', (e) => doTheTrick(e.target)))
-
-function doTheTrick(theClickedOne) {
-    if (good.checked || cheap.checked || fast.checked) {
-        if (good === theClickedOne) {
-            // good.checked = true
-            fast.checked = false
-            cheap.checked = false
-
-        }
-
-        if (cheap === theClickedOne) {
-            // cheap.checked = true
-            good.checked = false
-            fast.checked = false
-
-        }
-
-        if (fast === theClickedOne) {
-            // fast.checked = true
-            cheap.checked = false
-            good.checked = false
-
-        }
-    }
-}
-
-
-
-
-
-/* custom checkbox js */
-// Not really needed, but here for learning!
-// wouldn't work atm for multiple fieldsets in one window
 
 const radios = document.querySelectorAll('.radio-item'); // returns node list
 const inputs = document.querySelectorAll('.radio-item__input');
@@ -559,3 +417,8 @@ function selectRadios() {
     };
 };
 selectRadios();
+
+
+
+
+//////////////////HASTA ACA FUNCIONA
