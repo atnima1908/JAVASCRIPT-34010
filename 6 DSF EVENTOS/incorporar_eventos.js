@@ -209,8 +209,7 @@ class CafePreferencia {
     }
 
     mostrarData() {
-        console.log(`La preferencia del cafe es ${this.id}.
-        INFORMACION: ${this.class}
+        console.log(`${this.titulo}.
         ${this.info}`)
     }
 }
@@ -243,22 +242,38 @@ const preferencia3 = new CafePreferencia("opcion3", "preferenciaCafe", "Espresso
 const suscripcionPreferenciaCafe = []
 suscripcionPreferenciaCafe.push(preferencia1, preferencia2, preferencia3)
 console.log(suscripcionPreferenciaCafe)
+console.log(suscripcionPreferenciaCafe[preferencia1])
 
 let divPreferencia = document.getElementById("productos")
+
+
 suscripcionPreferenciaCafe.forEach((preferencia) => {
     let suscripcion = document.createElement("div")
-    suscripcion.innerHTML = ` <div class="toggle-container">
-                            <input type="checkbox" id="${preferencia.id}" class="seleccionCafe">
-                            <div class="card ${preferencia.clase}" style="width: 18rem; ">
-                                    <div class="card-body">
-                                        <h4 class="card-title">${preferencia.titulo}</h4>
-                                        <p class="">${preferencia.info}</p>
-                                    </div>
-                            </div>
-                            
-                        </div>`
+    suscripcion.innerHTML = `                            <label class="radio-item">
+       
+                                <span class="radio-item__label-text">
+
+                                    <h4 class="card-title">${preferencia.titulo}</h4>
+                                    <p class="">${preferencia.info}</p>
+
+                                </span>
+                            </label>`
     divPreferencia.append(suscripcion)
 })
+
+// let card = () => {
+//     let suscripcion = document.createElement("div")
+//     suscripcion.innerHTML = `<div id="${preferencia.id}" class="card ${preferencia.clase}" style="width: 18rem; ">
+//                                          <div class="card-body">
+//                                              <h4 class="card-title">${preferencia.titulo}</h4>
+//                                              <p class="">${preferencia.info}</p>
+//                                         </div>
+//                                  </div> `
+//     divPreferencia.append(suscripcion)
+// }
+
+
+
 
 
 

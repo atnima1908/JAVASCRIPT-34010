@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <title>JS - CMP</title>
 
 </head>
@@ -64,6 +64,29 @@
 
 
 
+        <!-- <fieldset id="labels-wrapping">
+                <legend for="dd-finish" class="">Choose a date</legend>
+                <div id="dd-finish" class="radios-wrapper">
+                    <label class="radio-item">
+                        <input type="radio" id="01/09/2020" name="finishDate" value="01/09/2020"
+                            class="radio-item__input">
+                        <span class="radio-item__label-text">Sep</span>
+                    </label>
+
+                    <label class="radio-item">
+                        <input type="radio" id="01/10/2020" name="finishDate" value="01/10/2020"
+                            class="radio-item__input">
+                        <span class="radio-item__label-text">Oct</span>
+                    </label>
+
+                    <label class="radio-item">
+                        <input type="radio" id="01/11/2020" name="finishDate" value="01/11/2020"
+                            class="radio-item__input">
+                        <span class="radio-item__label-text">Nov</span>
+                    </label>
+                </div>
+            </fieldset> -->
+
 
         <h2>How do you want your project to be?</h2>
         <div class="toggle-container">
@@ -93,19 +116,76 @@
 
 
 
-        <div class="accordionWrapper">
+
+
+
+        <!-- <div class="accordionWrapper">
             <div class="accordionItem open">
                 <h2 class="accordionItemHeading">About accordions</h2>
                 <div class="accordionItemContent">
                     <div id="productos" class="productosEstilos"></div>
+                    <fieldset id="labels-wrapping">
+                        <legend for="dd-finish" class="">Choose a date</legend>
+                        <div id="dd-finish" class="radios-wrapper">
+                            <label class="radio-item">
+                                <input type="radio" id="01/09/2020" name="finishDate" value="01/09/2020"
+                                    class="radio-item__input">
+                                <span class="radio-item__label-text">
+
+                                    <div id="${preferencia.id}" class="card ${preferencia.clase}"
+                                        style="width: 18rem; ">
+                                        <div class="card-body">
+                                            <h4 class="card-title">${preferencia.titulo}</h4>
+                                            <p class="">${preferencia.info}</p>
+                                        </div>
+                                    </div>
+
+                                </span>
+                            </label>
+
+                            <label class="radio-item">
+                                <input type="radio" id="01/10/2020" name="finishDate" value="01/10/2020"
+                                    class="radio-item__input">
+                                <span class="radio-item__label-text">
+
+                                    <div id="${preferencia.id}" class="card ${preferencia1.clase}"
+                                        style="width: 18rem; ">
+                                        <div class="card-body">
+                                            <h4 class="card-title">CAPSULA</h4>
+                                            <p class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem,
+                                                nihil reiciendis! Aut eum est rerum?</p>
+                                        </div>
+                                    </div>
+
+                                </span>
+                            </label>
+
+                            <label class="radio-item">
+                                <input type="radio" id="01/11/2020" name="finishDate" value="01/11/2020"
+                                    class="radio-item__input">
+                                <span class="radio-item__label-text">
+
+                                    <h4 class="card-title">${preferencia.titulo}</h4>
+                                    <p class="">${preferencia.info}</p>
+
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
 
                 </div>
             </div>
 
+
+
+
+
+
             <div class="accordionItem close">
                 <h2 class="accordionItemHeading">Accordion items</h2>
                 <div class="accordionItemContent">
-                    <p>A JavaScript accordion is made up of a number of expandable/collapsible items. Only one item is
+                    <p>A JavaScript accordion is made up of a number of expandable/collapsible items. Only one item
+                        is
                         ever shown at a time.</p>
                     <p>You can include any content you want inside an accordion item. Here's a bullet list:</p>
                     <ul>
@@ -119,24 +199,189 @@
             <div class="accordionItem close">
                 <h2 class="accordionItemHeading">How to use a JavaScript accordion</h2>
                 <div class="accordionItemContent">
-                    <p>Click an accordion item's heading to expand it. To collapse the item, click it again, or click
+                    <p>Click an accordion item's heading to expand it. To collapse the item, click it again, or
+                        click
                         another item heading.</p>
                 </div>
             </div>
-        </div>s
+        </div> -->
+
+
+
+
+        <!-- 
+        <div class="accordionWrapper">
+            <div class="accordionItem open">
+                <h2 class="accordionItemHeading">About accordions</h2>
+
+                <div class="accordionItemContent">
+                    <div id="productos" class="productosEstilos"></div>
+                    <fieldset id="labels-wrapping">
+                        <legend for="dd-finish" class="">Choose a date</legend>
+                        <div id="dd-finish" class="radios-wrapper">
+
+                            <label class="radio-item">
+
+                                <span class="radio-item__label-text">
+
+                                    <h4 class="card-title">${preferencia.titulo}</h4>
+                                    <p class="">${preferencia.info}</p>
+
+                                </span>
+                            </label>
+
+
+                        </div>
+                    </fieldset>
+
+                </div>
+            </div>
 
 
 
 
 
 
+            <div class="accordionItem close">
+                <h2 class="accordionItemHeading">Accordion items</h2>
+                <div class="accordionItemContent">
+                    <p>A JavaScript accordion is made up of a number of expandable/collapsible items. Only one item
+                        is
+                        ever shown at a time.</p>
+                    <p>You can include any content you want inside an accordion item. Here's a bullet list:</p>
+                    <ul>
+                        <li>List item #1</li>
+                        <li>List item #2</li>
+                        <li>List item #3</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordionItem close">
+                <h2 class="accordionItemHeading">How to use a JavaScript accordion</h2>
+                <div class="accordionItemContent">
+                    <p>Click an accordion item's heading to expand it. To collapse the item, click it again, or
+                        click
+                        another item heading.</p>
+                </div>
+            </div>
+        </div>
+
+ -->
 
 
 
 
 
+        <div class="accordionWrapper">
+
+            <div class="accordionItem open">
+                <h2 class="accordionItemHeading">¿Cómo te gusta tomar tu café?</h2>
+                <div class="accordionItemContent">
+
+                    <fieldset id="labels-wrapping">
+                        <div id="dd-finish" class="radios-wrapper">
+
+                            <div id="productos" class="productosEstilos"></div>
+
+                        </div>
+                    </fieldset>
 
 
+                </div>
+            </div>
+
+            <div class="accordionItem close">
+                <h2 class="accordionItemHeading">¿Qué tipo de café te gusta tomar?</h2>
+                <div class="accordionItemContent">
+
+                    <fieldset id="labels-wrapping">
+                        <div id="dd-finish" class="radios-wrapper">
+                            <label class="radio-item">
+                                <div id="productos" class="productosEstilos"></div>
+                                <p>otro</p>
+
+                            </label>
+                        </div>
+                    </fieldset>
+
+                </div>
+            </div>
+
+            <div class="accordionItem close">
+                <h2 class="accordionItemHeading">¿Cómo te gustaría tu grano de café?</h2>
+                <div class="accordionItemContent">
+
+                    <fieldset id="labels-wrapping">
+                        <div id="dd-finish" class="radios-wrapper">
+                            <label class="radio-item">
+                                <div id="productos" class="productosEstilos"></div>
+                                <p>otro</p>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                </div>
+            </div>
+
+            <div class="accordionItem close">
+                <h2 class="accordionItemHeading">¿Cuánto te gustaría recibir?</h2>
+                <div class="accordionItemContent">
+
+                    <fieldset id="labels-wrapping">
+                        <div id="dd-finish" class="radios-wrapper">
+                            <label class="radio-item">
+                                <div id="productos" class="productosEstilos"></div>
+                                <p>otro</p>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                </div>
+            </div>
+
+            <div class="accordionItem close">
+                <h2 class="accordionItemHeading">¿Con qué frecuencia le gustaría recibirlo?</h2>
+                <div class="accordionItemContent">
+
+                    <fieldset id="labels-wrapping">
+                        <div id="dd-finish" class="radios-wrapper">
+                            <label class="radio-item">
+                                <div id="productos" class="productosEstilos"></div>
+                                <p>otro</p>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- CODIGO CORRECTO PARA SELECCION DENTRO DEL ACORDEON -->
+        <!-- 
+            <div id="dd-finish" class="radios-wrapper">
+                <label class="radio-item">
+                    <div id="productos" class="productosEstilos"></div>
+                </label>
+            </div>
+
+
+            
+        -->
+
+
+        <!-- <label class="radio-item">
+
+            <span class="radio-item__label-text">
+
+                <h4 class="card-title">${preferencia.titulo}</h4>
+                <p class="">${preferencia.info}</p>
+
+            </span>
+        </label> -->
 
         <!------------------------------------------------------------------------>
         <!-- <script src="./4 PRIMERA PRE ENTREGA/1er_pre_entrega.js"></script> -->

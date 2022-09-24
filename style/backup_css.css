@@ -17,7 +17,6 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
 body {
     display: flex;
     justify-content: center;
@@ -25,27 +24,21 @@ body {
     min-height: 100vh;
     background-color: #bedfe8;
 }
-
 .accordion {
     width: 950px;
-
 }
-
 .accordion .contentBx {
     position: relative;
     margin: 10px 20px;
     padding: 10px;
 }
-
 .label {
     position: relative;
     padding: 10px;
     background-color: #2694af;
     color: #fff;
     cursor: pointer;
-
 }
-
 .label::before {
     content: "+";
     position: absolute;
@@ -54,11 +47,9 @@ body {
     transform: translateY(-50%);
     font-size: 1.5em;
 }
-
 .contentBx.active .label::before {
     content: '-';
 }
-
 .content {
     position: relative;
     background-color: #FFF;
@@ -67,13 +58,10 @@ body {
     transition: 0.5 s;
     overflow-y: auto;
 }
-
 .contentBx.active .content {
     height: 350px;
     padding: 10px;
 }
-
-
 } */
 
 
