@@ -216,10 +216,24 @@ class CafePreferencia {
 //Instanciación de objetos -- respetamos orden y cantidad de atributos
 
 const preferencia1 = new CafePreferencia("opcion1", "preferenciaCafe", "Capsula", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-
 const preferencia2 = new CafePreferencia("opcion2", "preferenciaCafe", "Filtro", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-
 const preferencia3 = new CafePreferencia("opcion3", "preferenciaCafe", "Espresso", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+
+const cafeina1 = new CafePreferencia("opcion1", "tipoCafe", "Original", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+const cafeina2 = new CafePreferencia("opcion2", "tipoCafe", "Descafeinado", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+const cafeina3 = new CafePreferencia("opcion3", "tipoCafe", "Mezcla", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+
+const grano1 = new CafePreferencia("opcion1", "granoCafe", "Grano entero", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+const grano2 = new CafePreferencia("opcion2", "granoCafe", "Filtro", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+const grano3 = new CafePreferencia("opcion3", "granoCafe", "Molido", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+
+const cantidad1 = new CafePreferencia("opcion1", "cantidadCafe", "250 gramos", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+const cantidad2 = new CafePreferencia("opcion2", "cantidadCafe", "500 gramos", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+const cantidad3 = new CafePreferencia("opcion3", "cantidadCafe", "1 kilogramo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+
+const frecuencia1 = new CafePreferencia("opcion1", "frecuenciaEnvio", "Semanal", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+const frecuencia2 = new CafePreferencia("opcion2", "frecuenciaEnvio", "Qincenal", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+const frecuencia3 = new CafePreferencia("opcion3", "frecuenciaEnvio", "Mensual", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
 
 
 //inicializar el array:
@@ -239,18 +253,42 @@ const preferencia3 = new CafePreferencia("opcion3", "preferenciaCafe", "Espresso
 //     divPreferencia.append(suscripcion)
 // })
 
-const suscripcionPreferenciaCafe = []
-suscripcionPreferenciaCafe.push(preferencia1, preferencia2, preferencia3)
-console.log(suscripcionPreferenciaCafe)
-console.log(suscripcionPreferenciaCafe[preferencia1])
-
-let divPreferencia = document.getElementById("productos")
+////////////// DOM - PREFERENCIA 
 
 
-suscripcionPreferenciaCafe.forEach((preferencia) => {
+const suscripcionPreferencia = []
+suscripcionPreferencia.push(preferencia1, preferencia2, preferencia3)
+console.log(suscripcionPreferencia)
+////////////// DOM - TIPO DE CAFE 
+const suscripcionTipo = []
+suscripcionTipo.push(cafeina1, cafeina2, cafeina3)
+console.log(suscripcionTipo)
+////////////// DOM - GRANO DE CAFE 
+const suscripcionGrano = []
+suscripcionGrano.push(grano1, grano2, grano3)
+// console.log(suscripcionGrano)
+////////////// DOM - CANTIDAD DE CAFE
+const suscripcionCantidad = []
+suscripcionCantidad.push(cantidad1, cantidad2, cantidad3)
+// console.log(suscripcionCantidad)
+////////////// DOM - FRECUENCIA ENVIO
+const suscripcionFrecuencia = []
+suscripcionFrecuencia.push(frecuencia1, frecuencia2, frecuencia3)
+// console.log(suscripcionFreciencia)
+
+
+// ATRAPANDO LOS NOMBRES DE NUESTROS DIV EN HTML
+let divPreferencia = document.getElementById("preferenciaCafe")
+let divTipo = document.getElementById("tipoCafe")
+let divGrano = document.getElementById("granoCafe")
+let divCantidad = document.getElementById("cantidadCafe")
+let divFrecuencia = document.getElementById("frecuenciaCafe")
+
+
+suscripcionPreferencia.forEach((preferencia) => {
     let suscripcion = document.createElement("div")
     suscripcion.innerHTML = `                            <label class="radio-item">
-       
+                                <input class="radio-item__input">
                                 <span class="radio-item__label-text">
 
                                     <h4 class="card-title">${preferencia.titulo}</h4>
@@ -260,6 +298,69 @@ suscripcionPreferenciaCafe.forEach((preferencia) => {
                             </label>`
     divPreferencia.append(suscripcion)
 })
+
+
+suscripcionTipo.forEach((cafeina) => {
+    let suscripcion = document.createElement("div")
+    suscripcion.innerHTML = `                            <label class="radio-item">
+                                <input class="radio-item__input">
+                                <span class="radio-item__label-text">
+
+                                    <h4 class="card-title">${cafeina.titulo}</h4>
+                                    <p class="">${cafeina.info}</p>
+
+                                </span>
+                            </label>`
+    divTipo.append(suscripcion)
+})
+
+
+suscripcionGrano.forEach((grano) => {
+    let suscripcion = document.createElement("div")
+    suscripcion.innerHTML = `                            <label class="radio-item">
+                                <input class="radio-item__input">
+                                <span class="radio-item__label-text">
+
+                                    <h4 class="card-title">${grano.titulo}</h4>
+                                    <p class="">${grano.info}</p>
+
+                                </span>
+                            </label>`
+    divGrano.append(suscripcion)
+})
+
+suscripcionCantidad.forEach((cantidad) => {
+    let suscripcion = document.createElement("div")
+    suscripcion.innerHTML = `                            <label class="radio-item">
+                                <input class="radio-item__input">
+                                <span class="radio-item__label-text">
+
+                                    <h4 class="card-title">${cantidad.titulo}</h4>
+                                    <p class="">${cantidad.info}</p>
+
+                                </span>
+                            </label>`
+    divCantidad.append(suscripcion)
+})
+
+
+suscripcionFrecuencia.forEach((frecuencia) => {
+    let suscripcion = document.createElement("div")
+    suscripcion.innerHTML = `                            <label class="radio-item">
+                                <input class="radio-item__input">
+                                <span class="radio-item__label-text">
+
+                                    <h4 class="card-title">${frecuencia.titulo}</h4>
+                                    <p class="">${frecuencia.info}</p>
+
+                                </span>
+                            </label>`
+    divFrecuencia.append(suscripcion)
+})
+
+
+
+
 
 // let card = () => {
 //     let suscripcion = document.createElement("div")
