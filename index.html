@@ -1,158 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
-
-    <link rel="stylesheet" href="./style/style.css">
-    <title>JS - CMP</title>
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
-
 <body>
-    <div>
-        <!-- <h1>CURSO JAVASCRIPT</h1> -->
-        <!-- <h3>PRIMERA PRE ENTREGA</h3> -->
-        <!-- <h5>Incorporando Arrays</h5> -->
-
-
-
-
-        <!-- ////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-        <div class="accordionWrapper">
-
-            <!-- PREFERENCIA DE CAFE -->
-            <div class="accordionItem open">
-                <h2 class="accordionItemHeading">¿Cómo te gusta tomar tu café?</h2>
-                <div class="accordionItemContent">
-
-                    <fieldset id="labels-wrapping">
-                        <div id="dd-finish" class="radios-wrapper">
-
-                            <div id="preferenciaCafe" class="productosEstilos"></div>
-
-                        </div>
-                    </fieldset>
-
-                </div>
+<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="four columns">
+                <h2>CURSOS ONLINE</h2>
             </div>
+            <div class="two columns u-pull-right">
+                <ul>
+                    <li class="submenu">
+                        <img src="img/cart.png" id="img-carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito" class="u-full-width">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
 
-            <!-- TIPO DE CAFE -->
-            <div class="accordionItem close">
-                <h2 class="accordionItemHeading">¿Qué tipo de café te gusta tomar?</h2>
-                <div class="accordionItemContent">
+                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                    </div>
+                                    </li>
+                                    </ul>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </header>
 
-                    <fieldset id="labels-wrapping">
-                        <div id="dd-finish" class="radios-wrapper">
-                            <label class="radio-item">
-                                <div id="tipoCafe" class="productosEstilos"></div>
 
-                            </label>
-                        </div>
-                    </fieldset>
 
-                </div>
-            </div>
-
-            <!-- GRANO DE CAFE -->
-            <div class="accordionItem close">
-                <h2 class="accordionItemHeading">¿Cómo te gustaría tu grano de café?</h2>
-                <div class="accordionItemContent">
-
-                    <fieldset id="labels-wrapping">
-                        <div id="dd-finish" class="radios-wrapper">
-                            <label class="radio-item">
-                                <div id="granoCafe" class="productosEstilos"></div>
-                            </label>
-                        </div>
-                    </fieldset>
-
-                </div>
-            </div>
-
-            <!-- CANTIDAD DE CAFE -->
-            <div class="accordionItem close">
-                <h2 class="accordionItemHeading">¿Cuánto te gustaría recibir?</h2>
-                <div class="accordionItemContent">
-
-                    <fieldset id="labels-wrapping">
-                        <div id="dd-finish" class="radios-wrapper">
-                            <label class="radio-item">
-                                <div id="cantidadCafe" class="productosEstilos"></div>
-                            </label>
-                        </div>
-                    </fieldset>
-
-                </div>
-            </div>
-
-            <!-- FRECUENCIA DE ENVIO -->
-            <div class="accordionItem close">
-                <h2 class="accordionItemHeading">¿Con qué frecuencia le gustaría recibirlo?</h2>
-                <div class="accordionItemContent">
-
-                    <fieldset id="labels-wrapping">
-                        <div id="dd-finish" class="radios-wrapper">
-                            <label class="radio-item">
-                                <div id="frecuenciaCafe" class="productosEstilos"></div>
-                            </label>
-                        </div>
-                    </fieldset>
-
+    <!-- BANNER -->
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <div class="contenido-hero">
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
 
 
-        <!-- CODIGO CORRECTO PARA SELECCION DENTRO DEL ACORDEON -->
-        <!--    
-                        <label class="radio-item">
-                                <input class="radio-item__input">
-                                <span class="radio-item__label-text">
 
-                                   <div id="productos" class="productosEstilos"></div>
+    <!--  -->
+    <div id="lista-cursos" class="container">
+        <h1 id="encabezado" class="encabezado">Coleccion de cafe</h1>
+        <!-- ROW -->
+        <div class="row">
+            <!-- CARD -->
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/curso1.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Curso en linea</h4>
+                        <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al
+                            Carrito</a>
+                    </div>
+                </div>
+                </div>
+                <!-- CARD -->
+                <div class="four columns">
+                    <div class="card">
+                        <img src="img/curso2.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Curso en linea</h4>
+                            <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al
+                                Carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="four columns">
+                    <div class="card">
+                        <img src="img/curso3.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Curso en linea</h4>
 
-                                </span>
-                            </label>
+                        <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar Al
+                            Carrito</a>
+                        </div>
+                        </div>
+                        </div>
+
+        </div>
+
+        <!-- ROW -->
+        <div class="row">
+            <!-- CARD -->
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/curso4.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Curso en linea</h4>
+
+                        <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al
+                            Carrito</a>
+                        </div>
+                </div>
+                </div>
+                <!-- CARD -->
+                <div class="four columns">
+                    <div class="card">
+                        <img src="img/curso5.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Curso en linea</h4>
+
+                        <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar Al
+                            Carrito</a>
+                    </div>
+                    </div>
+            </div>
+            <!-- CARD -->
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/curso1.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Curso en linea</h4>
+
+                        <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="6">Agregar Al
+                            Carrito</a>
+                        </div>
+                </div>
+                </div>
+                </div>
+
+        <!-- ROW -->
+        <div class="row">
+            <!-- CARD -->
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/curso2.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Curso en linea</h4>
+
+                        <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al
+                            Carrito</a>
+                        </div>
+                </div>
+                </div>
+                <!-- CARD -->
+                <div class="four columns">
+                    <div class="card">
+                        <img src="img/curso3.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Curso en linea</h4>
+
+                        <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al
+                            Carrito</a>
+                    </div>
+                    </div>
+            </div>
+            <!-- CARD -->
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/curso4.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Curso en linea</h4>
+
+                        <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al
+                            Carrito</a>
+                        </div>
+                </div>
+                </div>
+                </div>
+                <!--ROW-->
+                <div class="row">
+                    <!-- CARD -->
+                    <div class="four columns">
+                        <div class="card">
+                            <img src="img/curso5.jpg" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <h4>Curso en linea</h4>
+
+                            <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="10">Agregar Al
+                                Carrito</a>
+                            </div>
+                            </div>
+                            </div>
+                            <!-- CARD -->
+                            <div class="four columns">
+                                <div class="card">
+                                    <img src="img/curso1.jpg" class="imagen-curso u-full-width">
+                                    <div class="info-card">
+                                        <h4>Curso en linea</h4>
+
+                            <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="11">Agregar Al
+                                Carrito</a>
+                            </div>
+                            </div>
+                            </div>
+                            <!-- CARD -->
+                            <div class="four columns">
+                                <div class="card">
+                                    <img src="img/curso2.jpg" class="imagen-curso u-full-width">
+                                    <div class="info-card">
+                                        <h4>Curso en linea</h4>
+
+                    <p class="precio">$20 <span class="u-pull-right ">$15</span></p>
+                    <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al
+                        Carrito</a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+
 
     
-                            <label class="radio-item">
-                                <input class="radio-item__input">
-                                <span class="radio-item__label-text">
-
-                                    <h4 class="card-title">${preferencia.titulo}</h4>
-                                    <p class="">${preferencia.info}</p>
-
-                                </span>
-                            </label>
-    
-    
-    -->
 
 
 
-        <!------------------------------------------------------------------------>
-        <!-- <script src="./4 PRIMERA PRE ENTREGA/1er_pre_entrega.js"></script> -->
-        <!------------------------------------------------------------------------>
-        <!-- <script src="./1 CMP - ALGORITMO CON CICLO/js/cmp_ciclos.js"></script> -->
-        <!-- <script src="./2 DSF - SIMULADOR INTERACTIVO/simulador_interactivo.js"></script> -->
-        <!-- <script src="./3 CMP - ARRAYS/incorporando_arryas.js"></script> -->
-        <!-- <script src="./5 CMP - DOM/interactuar_HTML.js"></script> -->
-        <script src="./6 DSF EVENTOS/incorporar_eventos.js"></script>
-
+    <script src="./7 SEGUNDA PRE ENTREGA/2da_pre_entrega.js"></script>
 
 </body>
-
 </html>
